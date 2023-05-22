@@ -6,8 +6,8 @@ import math
 lista = []
 soma = 0
 contador = 0
-menor = -1
-maior = float("ing")
+menor = float("inf")
+maior = -float("inf")
 whil = 0
 while whil != 20:
     numero = round((random.random()*100) , 0)
@@ -25,4 +25,11 @@ for i in range(len(lista)):
 print (soma)
 
 for i in range(len(lista)):
-    
+    if lista[i] < menor:
+        menor = lista[i]
+print(menor)
+
+for i in range(len(lista)):
+    if lista[i] > maior:
+        maior = lista[i]
+print(maior)
